@@ -1,0 +1,27 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .shell-header {
+    position: relative;
+    z-index: 2;
+  }
+
+  .shell-container {
+    flex: 1 0 auto;
+    .shell-sidenav {
+      width: 256px;
+    }
+  }
+
+  .shell-footer {
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+
+  & .mat-sidenav-content {
+    overflow: hidden;
+  }
+}

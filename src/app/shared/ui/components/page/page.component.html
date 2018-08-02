@@ -1,0 +1,16 @@
+<div class="page">
+  <div class="page-header">
+    <mat-icon *ngIf="icon">{{icon}}</mat-icon>
+    <h3 *ngIf="title">{{title}}</h3>
+    <nav *ngIf="tabsVisible" mat-tab-nav-bar>
+      <a mat-tab-link
+        *ngFor="let tab of tabs"
+        [routerLink]="tab.path"
+        routerLinkActive #rla="routerLinkActive"
+        [active]="rla.isActive">{{tab.label}}</a>
+    </nav>
+  </div>
+  <div class="page-block">
+    <ng-content></ng-content>
+  </div>
+</div>

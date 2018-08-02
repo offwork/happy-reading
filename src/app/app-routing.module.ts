@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ShellComponent } from './shared/shell/shell.component';
+import { ShellComponent } from './core/shell/shell.component';
 
 const routes: Routes = [
-  {path: '', component: ShellComponent, pathMatch: 'full'}
+  { path: '', redirectTo: 'index', pathMatch: 'full' },
+  {
+    path: '',
+    component: ShellComponent,
+    children: [
+      { path: 'index', loadChildren: './dashboard/dashboard.module#DashboardModule' }
+    ]
+  },
 ];
 
 @NgModule({

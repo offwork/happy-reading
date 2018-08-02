@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { ShellModule } from './shared/shell/shell.module';
+import { ShellModule } from './core/shell/shell.module';
 
 @NgModule({
   declarations: [
